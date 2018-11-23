@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/missionFragment"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="任务"/>
+
+    <item
+            android:id="@+id/readFragment"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="读卡"/>
+
+</menu>
