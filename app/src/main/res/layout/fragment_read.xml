@@ -9,5 +9,14 @@
             android:id="@+id/webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="4dp"
+            android:layout_gravity="top"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+    />
+
 
 </FrameLayout>

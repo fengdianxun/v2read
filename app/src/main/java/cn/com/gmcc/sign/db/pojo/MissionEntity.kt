@@ -18,7 +18,7 @@ class MissionEntity(
     /**
      * 任务名.
      */
-    val name: String,
+    val name: String="",
     /**
      * 链接.
      */
@@ -26,9 +26,9 @@ class MissionEntity(
     /**
      * 状态.
      */
-    var state: String,
+    var state: String="N",
     /**
      * 创建时间.
      */
-    val createAt: Date
+    val createAt: Date = Date()
 ) : Parcelable

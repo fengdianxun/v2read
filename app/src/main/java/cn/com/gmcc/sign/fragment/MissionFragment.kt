@@ -27,7 +27,6 @@ import java.text.SimpleDateFormat
 
 
 class MissionFragment : Fragment() {
-    val REQUEST_CODE_FILE = 1
     lateinit var application: MyApplication
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,26 +53,6 @@ class MissionFragment : Fragment() {
         })
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.menu_main, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            R.id.action_add -> openFile()
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-    private fun openFile() {
-        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
-        intent.addCategory(Intent.CATEGORY_OPENABLE)
-        intent.type = "text/plain"
-        startActivityForResult(intent, REQUEST_CODE_FILE)
-    }
-
 
 }
 
@@ -91,6 +70,8 @@ class MissionAdapter(var list: List<MissionEntity> = listOf()) : RecyclerView.Ad
     override fun onBindViewHolder(holder: MissionViewHolder, position: Int) {
         val mission = list[position]
         holder.view.titleTv.text = mission.name
+        holder.view.siteTv.text = mission.url
+
         holder.view.setOnClickListener {
             val bundle = Bundle()
             bundle.putParcelable("mission", mission)

@@ -5,9 +5,9 @@
             app:startDestination="@id/missionFragment">
 
     <fragment android:id="@+id/missionFragment" android:name="cn.com.gmcc.sign.fragment.MissionFragment"
-              android:label="任务列表" tools:layout="@layout/fragment_mission">
+              android:label="待阅" tools:layout="@layout/fragment_mission">
         <action android:id="@+id/action_missionFragment_to_readFragment" app:destination="@id/readFragment"/>
     </fragment>
     <fragment android:id="@+id/readFragment" android:name="cn.com.gmcc.sign.fragment.ReadFragment"
-              android:label="读卡" tools:layout="@layout/fragment_read"/>
+              android:label="阅读中" tools:layout="@layout/fragment_read"/>
 </navigation>
